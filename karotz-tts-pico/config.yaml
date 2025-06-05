@@ -4,10 +4,17 @@ slug: karotz_tts_pico
 description: TTS local pour Karotz utilisant Pico TTS (Raspberry Pi 3/4)
 startup: services
 boot: auto
-hassio_api: false
+hassio_api: true
 host_network: true
-homeassistant_api: false
-options: {}
-schema: {}
+homeassistant_api: true
+options:
+  port: 5000
+schema:
+  port: int
 icon: icon.png
-image: local/karotz-tts-pico 
+image: "desperado88/karotz-tts-pico-{arch}"
+arch:
+  - aarch64
+  - armv7
+  - armhf
+  - amd64

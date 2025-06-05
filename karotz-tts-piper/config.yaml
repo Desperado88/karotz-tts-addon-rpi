@@ -16,4 +16,5 @@ image: "desperado88/karotz-tts-piper-{arch}"
 arch:
   - aarch64
   - armv7
-  - armhf 
+  - armhf
+  - amd64 
