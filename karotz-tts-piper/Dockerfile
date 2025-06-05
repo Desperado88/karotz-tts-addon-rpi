@@ -1,6 +1,9 @@
-FROM python:3.11-slim
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
-RUN apt-get update && \
+# Install system packages
+RUN \
+    apt-get update && \
     apt-get install -y \
         build-essential \
         python3-dev \
@@ -31,4 +34,12 @@ RUN pip3 install -r requirements.txt
 COPY piper_tts.py /app/
 RUN mkdir -p /app/cache
 
-CMD ["python3", "/app/piper_tts.py"] 
+CMD ["python3", "/app/piper_tts.py"]
+
+# Labels
+LABEL \
+    io.hass.name="Karotz TTS Piper" \
+    io.hass.description="TTS local pour Karotz utilisant Piper TTS" \
+    io.hass.arch="${BUILD_ARCH}" \
+    io.hass.type="addon" \
+    io.hass.version=${BUILD_VERSION} 
