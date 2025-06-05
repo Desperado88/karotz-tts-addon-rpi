@@ -9,4 +9,5 @@ host_network: true
 homeassistant_api: false
 options: {}
 schema: {}
+icon: icon.png
 image: local/karotz-tts-piper 
