@@ -1,0 +1,12 @@
+name: Karotz TTS (Pico)
+version: "1.0.0"
+slug: karotz_tts_pico
+description: TTS local pour Karotz utilisant Pico TTS (Raspberry Pi 3/4)
+startup: services
+boot: auto
+hassio_api: false
+host_network: true
+homeassistant_api: false
+options: {}
+schema: {}
+image: local/karotz-tts-pico 
