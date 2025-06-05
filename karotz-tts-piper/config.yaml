@@ -12,7 +12,7 @@ options:
 schema:
   port: int
 icon: icon.png
-image: "desperado88/karotz-tts-piper-{arch}"
+image: local/karotz-tts-piper
 arch:
   - aarch64
   - armv7
