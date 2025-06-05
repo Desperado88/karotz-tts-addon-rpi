@@ -10,7 +10,7 @@ Cet addon nécessite au minimum un Raspberry Pi 3 B+ pour fonctionner correcteme
 
 1. Ajouter ce dépôt dans Home Assistant via `Paramètres > Modules complémentaires > ⚙️ Réglages > Dépôts` :
    ```
-   https://github.com/Desperado88/karotz-tts-addon
+   https://github.com/Desperado88/karotz-tts-addon-rpi
    ```
 
 2. Installer l'add-on "Karotz TTS"
