@@ -4,10 +4,16 @@ slug: karotz_tts_piper
 description: TTS local pour Karotz utilisant Piper TTS (Raspberry Pi 5)
 startup: services
 boot: auto
-hassio_api: false
+hassio_api: true
 host_network: true
-homeassistant_api: false
-options: {}
-schema: {}
+homeassistant_api: true
+options:
+  port: 5000
+schema:
+  port: int
 icon: icon.png
-image: local/karotz-tts-piper 
+image: "desperado88/karotz-tts-piper-{arch}"
+arch:
+  - aarch64
+  - armv7
+  - armhf 
