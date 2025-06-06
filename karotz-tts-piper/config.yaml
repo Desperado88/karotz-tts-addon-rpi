@@ -1,7 +1,7 @@
 name: Karotz TTS (Piper)
 version: "1.0.0"
 slug: karotz_tts_piper
-description: TTS local pour Karotz utilisant Piper TTS (Raspberry Pi 5)
+description: TTS local pour Karotz utilisant Piper TTS (Raspberry Pi 4/5)
 startup: services
 boot: auto
 hassio_api: true
