@@ -9,8 +9,14 @@ import io
 
 app = Flask(__name__)
 CACHE_DIR = "/app/cache"
-MODEL_PATH = "/app/models/fr_FR-upmc-medium.onnx"
-CONFIG_PATH = "/app/models/fr_FR-upmc-medium.onnx.json"
+
+# Chargement de la configuration
+with open("/data/options.json") as f:
+    options = json.load(f)
+
+MODEL_NAME = options.get("model_name", "fr_FR-upmc-medium")
+MODEL_PATH = f"/app/models/{MODEL_NAME}.onnx"
+CONFIG_PATH = f"/app/models/{MODEL_NAME}.onnx.json"
 
 # Initialisation de Piper TTS
 with open(CONFIG_PATH) as f:

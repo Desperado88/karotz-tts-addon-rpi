@@ -8,8 +8,20 @@ boot: auto
 hassio_api: false
 host_network: true
 homeassistant_api: false
-options: {}
-schema: {}
+options:
+  model_name: fr_FR-upmc-medium
+  sample_rate: 22050
+schema:
+  model_name:
+    name: Nom du modèle
+    description: Nom du modèle de voix à utiliser
+    type: string
+    default: fr_FR-upmc-medium
+  sample_rate:
+    name: Taux d'échantillonnage
+    description: Taux d'échantillonnage audio (Hz)
+    type: integer
+    default: 22050
 icon: icon.png
 arch:
   - amd64
