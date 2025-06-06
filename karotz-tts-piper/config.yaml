@@ -11,7 +11,7 @@ homeassistant_api: false
 options:
   model_name: fr_FR-upmc-medium
   sample_rate: 22050
-  speaking_rate: 0.8
+  speaking_rate: 1
 schema:
   model_name:
     name: Nom du modèle
@@ -27,7 +27,7 @@ schema:
     name: Vitesse de parole
     description: Vitesse de parole (0.5 = lent, 1.0 = normal, 1.5 = rapide)
     type: float
-    default: 0.8
+    default: 1
 icon: icon.png
 arch:
   - amd64
