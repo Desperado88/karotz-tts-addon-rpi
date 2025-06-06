@@ -17,6 +17,7 @@ with open("/data/options.json") as f:
 MODEL_NAME = options.get("model_name", "fr_FR-upmc-medium")
 MODEL_PATH = f"/app/models/{MODEL_NAME}.onnx"
 CONFIG_PATH = f"/app/models/{MODEL_NAME}.onnx.json"
+SPEAKING_RATE = float(options.get("speaking_rate", 0.8))
 
 # Initialisation de Piper TTS
 with open(CONFIG_PATH) as f:
@@ -32,7 +33,7 @@ def tts():
     if lang == "fr": 
         lang = "fr-FR"
 
-    md5Hash = hashlib.md5((lang + gender + text).encode("utf-8")).hexdigest()
+    md5Hash = hashlib.md5((lang + gender + text + str(SPEAKING_RATE)).encode("utf-8")).hexdigest()
     mp3_path = f"{CACHE_DIR}/{md5Hash}.mp3"
     wav_path = f"{CACHE_DIR}/{md5Hash}.wav"
 
@@ -43,7 +44,7 @@ def tts():
             wav_file.setnchannels(1)  # Mono
             wav_file.setsampwidth(2)  # 16-bit
             wav_file.setframerate(piper_tts.config.sample_rate)
-            piper_tts.synthesize(text, wav_file)
+            piper_tts.synthesize(text, wav_file, speaking_rate=SPEAKING_RATE)
         
         # Écriture du fichier WAV temporaire
         with open(wav_path, 'wb') as f:
