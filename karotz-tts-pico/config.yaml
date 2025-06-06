@@ -2,7 +2,7 @@ name: Karotz TTS
 version: "1.0.0"
 slug: karotz-tts
 description: TTS local pour Karotz. Optimisé pour Raspberry Pi 3 B+ et versions ultérieures.
-url: https://github.com/Desperado88/karotz-tts-addon
+url: https://github.com/Desperado88/karotz-tts-addon-rpi
 startup: services
 boot: auto
 hassio_api: false

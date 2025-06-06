@@ -1,20 +1,18 @@
-name: Karotz TTS (Piper)
+name: Karotz TTS
 version: "1.0.0"
-slug: karotz_tts_piper
-description: TTS local pour Karotz utilisant Piper TTS (Raspberry Pi 4/5)
+slug: karotz-tts
+description: TTTS local pour Karotz utilisant Piper TTS (Raspberry Pi 4/5)
+url: https://github.com/Desperado88/karotz-tts-addon
 startup: services
 boot: auto
-hassio_api: true
+hassio_api: false
 host_network: true
-homeassistant_api: true
-options:
-  port: 5000
-schema:
-  port: int
+homeassistant_api: false
+options: {}
+schema: {}
 icon: icon.png
-image: "karotz-tts-piper"
 arch:
+  - amd64
   - aarch64
   - armv7
   - armhf
-  - amd64 
