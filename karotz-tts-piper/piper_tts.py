@@ -17,7 +17,7 @@ with open("/data/options.json") as f:
 MODEL_NAME = options.get("model_name", "fr_FR-upmc-medium")
 MODEL_PATH = f"/app/models/{MODEL_NAME}.onnx"
 CONFIG_PATH = f"/app/models/{MODEL_NAME}.onnx.json"
-SPEAKING_RATE = float(options.get("speaking_rate", 0.8))
+SPEAKING_RATE = float(options.get("speaking_rate", 1))
 
 # Initialisation de Piper TTS
 with open(CONFIG_PATH) as f:
