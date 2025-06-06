@@ -1,4 +1,4 @@
-name: Karotz TTS
+name: Karotz pico TTS
 version: "1.0.0"
 slug: karotz-tts-pico
 description: TTS local pour Karotz. Optimisé pour Raspberry Pi 3 B+ et versions ultérieures.

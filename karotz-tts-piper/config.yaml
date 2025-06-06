@@ -1,4 +1,4 @@
-name: Karotz TTS
+name: Karotz piper TTS
 version: "1.0.0"
 slug: karotz-tts-piper
 description: TTTS local pour Karotz utilisant Piper TTS (Raspberry Pi 4/5)
