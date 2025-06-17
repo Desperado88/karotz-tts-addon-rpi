@@ -38,7 +38,7 @@ def tts():
             wav_file.setsampwidth(2)  # 16-bit
             wav_file.setframerate(piper_tts.config.sample_rate)
             piper_tts.synthesize(text, wav_file)
-
+        
         # Écriture du fichier WAV temporaire
         with open(wav_path, 'wb') as f:
             f.write(wav_io.getvalue())
