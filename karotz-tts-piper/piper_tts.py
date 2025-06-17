@@ -56,7 +56,7 @@ def tts():
         # Ajout de 0.5s de silence au début du fichier MP3
         padded_mp3_path = mp3_path.replace(".mp3", "_pad.mp3")
         subprocess.run([
-            "sox", mp3_path, padded_mp3_path, "pad", "0.5"
+            "sox", mp3_path, padded_mp3_path, "pad", "1"
         ])
         os.replace(padded_mp3_path, mp3_path)  # Remplace l'original
 
