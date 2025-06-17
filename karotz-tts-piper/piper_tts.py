@@ -39,21 +39,21 @@ def tts():
 #            wav_file.setframerate(piper_tts.config.sample_rate)
 #            piper_tts.synthesize(text, wav_file)
         with wave.open(wav_io, 'wb') as wav_file:
-            wav_file.setnchannels(1)  # Mono
-            wav_file.setsampwidth(2)  # 16-bit
-            wav_file.setframerate(piper_tts.config.sample_rate)
-        
-            # Durée du silence (en secondes)
-            silence_duration = 0.5
             sample_rate = piper_tts.config.sample_rate
-            num_silence_samples = int(sample_rate * silence_duration)
-            silence = (b'\x00\x00' * num_silence_samples)  # 16-bit silence
+            wav_file.setnchannels(1)         # Mono
+            wav_file.setsampwidth(2)         # 16-bit
+            wav_file.setframerate(sample_rate)
         
-            # Ajoute le silence en début
+            # Ajoute 0.5 seconde de silence
+            silence_duration = 0.5  # en secondes
+            num_silence_samples = int(sample_rate * silence_duration)
+            silence = b'\x00\x00' * num_silence_samples  # 16-bit silence
+        
             wav_file.writeframes(silence)
         
-            # Puis la synthèse vocale
+            # Synthèse vocale juste après le silence
             piper_tts.synthesize(text, wav_file)
+
 
         # Écriture du fichier WAV temporaire
         with open(wav_path, 'wb') as f:
