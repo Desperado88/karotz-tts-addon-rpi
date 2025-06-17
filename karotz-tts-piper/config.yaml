@@ -1,5 +1,5 @@
 name: Karotz piper TTS
-version: "1.0.0"
+version: "1.0.1"
 slug: karotz-tts-piper
 description: TTTS local pour Karotz utilisant Piper TTS (Raspberry Pi 4/5)
 url: https://github.com/Desperado88/karotz-tts-addon
